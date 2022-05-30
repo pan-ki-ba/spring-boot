@@ -1,0 +1,46 @@
+
+### application properties
+
+spring:
+  application:
+    name: restful-web-services
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    properties:
+      hibernate.format_sql: true
+  datasource:
+    url: jdbc:h2:file:./data/restful-web-services
+    username: sa
+    password: 
+    driverClassName: org.h2.Driver
+    
+rest:
+  server:
+    enabled: true
+    exception-handler:
+      enabled: true
+
+app:
+  version: '@project.version@'
+
+### actuator properties
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+### logging properties
+
+logging:
+  level:
+    org.springframework.boot.context.config.ConfigFileApplicationListener: DEBUG
+    com.pankiba.reststarter.server.audit.LoggingFilter: DEBUG
+  file:
+    name: logs/restful-web-services.log
+  pattern:
+    console: "%d{yyyy-MM-dd} %d{HH:mm:ss.SSS} | %blue(%thread) | %5p | %logger | %m%n"
+    file: "%d{yyyy-MM-dd} %d{HH:mm:ss.SSS} | %thread | %5p | %logger | %m%n"

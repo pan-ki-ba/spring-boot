@@ -1,0 +1,12 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+### server properties
+
+server:
+  servlet:
+    context-path: /restful-web-services
+  port: 9080

@@ -1,0 +1,47 @@
+[
+  {
+    "businessUnitId": 1001,
+    "businessUnitName": "ADM",
+    "employees": [
+      {
+        "employeeId": 5001,
+        "firstName": "John",
+        "lastName": "McLane",
+        "gender": "M",
+        "email": "john.rambo@users.noreply.github.com",
+        "birthDate": "07/29/1970",
+        "joiningDate": "07/25/2008",
+        "grade": "Developer",
+        "salary": 20000
+      },
+      {
+        "employeeId": 5002,
+        "firstName": "Ethan",
+        "lastName": "Hunt",
+        "gender": "M",
+        "email": "ethan.hunt@users.noreply.github.com",
+        "birthDate": "09/25/1982",
+        "joiningDate": "07/20/2005",
+        "grade": "Lead",
+        "salary": 30000
+      }
+    ]
+  },
+  {
+    "businessUnitId": 1002,
+    "businessUnitName": "TSL",
+    "employees": [
+      {
+        "employeeId": 5003,
+        "firstName": "Jery",
+        "lastName": "Maguire",
+        "gender": "M",
+        "email": "jery.maguire@@users.noreply.github.com\"",
+        "birthDate": "06/07/1959",
+        "joiningDate": "04/25/1994",
+        "grade": "Lead",
+        "salary": 30000
+      }
+    ]
+  }
+]
