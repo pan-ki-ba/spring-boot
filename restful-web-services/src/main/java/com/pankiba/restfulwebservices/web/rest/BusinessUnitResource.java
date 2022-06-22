@@ -21,6 +21,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.pankiba.restfulwebservices.domain.BusinessUnit;
 import com.pankiba.restfulwebservices.domain.Employee;
 import com.pankiba.restfulwebservices.service.BusinessUnitService;
+import com.pankiba.restfulwebservices.service.dto.BusinessUnitDTO;
+import com.pankiba.restfulwebservices.service.mapper.BusinessUnitMapper;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,6 +33,9 @@ public class BusinessUnitResource {
 
 	@Autowired
 	private BusinessUnitService businessUnitService;
+	
+	@Autowired
+	private BusinessUnitMapper businessUnitMapper;
 
 	/**
 	 * Retrieve All BusinessUnits
@@ -72,6 +77,11 @@ public class BusinessUnitResource {
 	public ResponseEntity<BusinessUnit> getBusinessUnit(@PathVariable Long businessUnitId) {
 		log.info("Fetching BusinessUnit with id {}", businessUnitId);
 		BusinessUnit businessUnit = businessUnitService.getBusinessUnit(businessUnitId);
+		
+		BusinessUnitDTO businessUnitDTO = businessUnitMapper.toDto(businessUnit);
+		
+		log.info(" businessUnitDTO : {} ",businessUnitDTO);
+		
 		return new ResponseEntity<BusinessUnit>(businessUnit, HttpStatus.OK);
 	}
 

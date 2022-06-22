@@ -79,7 +79,7 @@ public class RestfulWebServicesApplication {
 
 			BusinessUnit businessUnit1 = new BusinessUnit("ADM");
 
-			businessUnit1.addEmployee(new Employee("John", "McLane", "M", "john.rambo@users.noreply.github.com",
+			businessUnit1.addEmployee(new Employee("John", "McLane", "M", "john.mclane@users.noreply.github.com",
 					parseDate("1970-07-30", "yyyy-MM-dd"), parseDate("2008-07-26", "yyyy-MM-dd"), Grade.Developer,
 					20000L));
 
@@ -90,7 +90,7 @@ public class RestfulWebServicesApplication {
 
 			BusinessUnit businessUnit2 = new BusinessUnit("TSL");
 
-			businessUnit2.addEmployee(new Employee("Jery", "Maguire", "M", "jery.maguire@@users.noreply.github.com\"",
+			businessUnit2.addEmployee(new Employee("Jery", "Maguire", "M", "jery.maguire@@users.noreply.github.com",
 					parseDate("1959-06-08", "yyyy-MM-dd"), parseDate("1994-04-26", "yyyy-MM-dd"), Grade.Lead, 30000L));
 
 			businessUnitService.createBusinessUnit(businessUnit2);

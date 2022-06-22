@@ -40,6 +40,8 @@ public class BusinessUnitServiceImpl implements BusinessUnitService {
 	@Override
 	public BusinessUnit getBusinessUnit(Long businessUnitId) {
 		Optional<BusinessUnit> businessUnitOptional = validateBusinessUnit(businessUnitId);
+		log.info(" bu {}", businessUnitOptional.get());
+		log.info(" em {} ", businessUnitOptional.get().getEmployees());
 		return businessUnitOptional.get();
 	}
 

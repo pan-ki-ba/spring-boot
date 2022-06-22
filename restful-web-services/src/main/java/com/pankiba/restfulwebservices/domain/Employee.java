@@ -14,6 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -51,10 +53,10 @@ public class Employee implements Serializable {
 	private String email;
 
 	@Past
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
 	private Date birthDate;
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
 	private Date joiningDate;
 	
 	@Enumerated(EnumType.STRING)
